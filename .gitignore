@@ -5,3 +5,6 @@ logs/
 memory/db/
 .chromadb/
 ollama.log
+venv311/
+logs/
+__pycache__/

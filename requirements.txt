@@ -1,5 +1,5 @@
 autogen==0.9.10
-crewai==0.130.0
+crewai
 langgraph==0.4.7
 langchain==0.3.25
 langchain-community==0.3.24
@@ -7,7 +7,7 @@ langchain-ollama==0.3.3
 langchain-openai==0.3.18
 gradio==5.29.0
 yfinance==0.2.61
-jugaad-data==0.27
+jugaad-data
 pdfplumber==0.11.6
 chromadb==1.0.10
 beautifulsoup4==4.13.4
@@ -16,3 +16,15 @@ duckduckgo-search==8.0.2
 pandas==2.2.3
 mcp==1.9.0
 bs4==0.0.2
+
+
+#py -3.11 -m venv venv311
+#.\venv311\Scripts\Activate.ps1
+#pip install -r requirements.txt
+#$env:JAVA_HOME="D:\JDK17"
+#$env:PATH="$env:JAVA_HOME\bin;$env:PATH"
+#pip install ollama
+#$env:HADOOP_HOME="D:\hadoop"
+#$env:hadoop_home="D:\hadoop"
+#$env:PATH="$env:HADOOP_HOME\bin;$env:PATH"
+#echo $env:HADOOP_HOME

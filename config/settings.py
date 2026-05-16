@@ -1,6 +1,0 @@
-OLLAMA_BASE_URL = "http://localhost:11434"
-OLLAMA_MODEL = "llama3.1"
-EMBED_MODEL = "mxbai-embed-large"
-VECTOR_DB_DIR = "./memory/db"
-LOG_FILE = "./logs/stocks_app.log"
-SCREENER_URL = "https://www.screener.in/screens/209239/breakout-stocks/"
