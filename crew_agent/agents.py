@@ -1,7 +1,7 @@
 from crewai import Agent, Task, Crew, Process, LLM
 import os
 from config.logger_util import logger
-from config.ai_config import llm
+from config.ai_config import local_llm as llm
 from tools.stock_tool import analyze_breakout_potential, audit_stock_performance, scrape_breakout_scanner, search_web_for_stocks
 
 
@@ -17,9 +17,12 @@ analyst = Agent(
     # Ensure tool names here match the function names exactly
     tools=[analyze_breakout_potential, search_web_for_stocks, scrape_breakout_scanner],
     llm=llm,
-    verbose=False, # Critical to see WHY the agent chooses a tool
+    verbose=True, # Critical to see WHY the agent chooses a tool
     allow_delegation=False,
-    memory=False
+    memory=False,
+    max_iter=2,            
+    max_execution_time=30,
+    max_rpm=10,
 )
 
 manager = Agent(
@@ -33,8 +36,11 @@ manager = Agent(
     ),
     tools=[audit_stock_performance, search_web_for_stocks],
     llm=llm,
-    verbose=False,
-    allow_delegation=False
+    verbose=True,
+    allow_delegation=False,
+    max_iter=2,            
+    max_execution_time=30,
+    max_rpm=10,
 )
 
 logger.info("✅ Agents and LLM Re-Configured for strict instruction following.")

@@ -41,7 +41,7 @@ def router_node(state: AgentState):
 
     try:
             logger.info(f"Calling LLM From Router Node")
-            response = llm.invoke(classification_prompt).strip()
+            response = llm.invoke(classification_prompt).content.strip()
             logger.info(f"DEBUG: LLM Router Response: {response}")
 
             upper_res = response.upper()

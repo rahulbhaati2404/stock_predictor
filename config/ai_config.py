@@ -1,9 +1,15 @@
+from crewai import LLM
 from langchain_ollama import ChatOllama
 
 # Initialize the Ollama instance for llama3.2:1b
 llm = ChatOllama(
     model="mistral",
     temperature=0,
+)
+
+local_llm = LLM(
+    model="ollama/mistral",
+    base_url="http://localhost:11434"
 )
 
 config_list = [
